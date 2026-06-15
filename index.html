@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>La Neverita — Helados Artesanales</title>
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap" rel="stylesheet" />
+
+  <!-- Estilos -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ==========================================
+       NAV
+  ========================================== -->
+  <nav class="nav">
+    <div class="nav-inner">
+
+      <a id="logo-link" class="logo" href="#">
+        <div class="logo-mark">
+          <img src="images/logo.png" alt="La Neverita" />
+        </div>
+        <div>
+          <span class="logo-text">La Neverita</span>
+          <span class="logo-sub">Helados Artesanales</span>
+        </div>
+      </a>
+
+      <!-- <ul class="nav-links">
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul> -->
+
+      <div class="nav-cart">
+        <button class="cart-pill" onclick="openCart()" aria-label="Ver pedido">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 2 3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/>
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <path d="M16 10a4 4 0 01-8 0"/>
+          </svg>
+          <span>Mi pedido</span>
+          <span class="cart-count" id="cart-count">0</span>
+        </button>
+      </div>
+
+    </div>
+  </nav>
+
+  <!-- ==========================================
+       HERO
+  ========================================== -->
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-eyebrow">Helados artesanales</div>
+      <h1>El sabor que<br><em>mereces</em>,<br>en tu puerta.</h1>
+      <p class="hero-body">
+        Helados elaborados a mano con ingredientes frescos.
+        Elige tus favoritos y recíbelos en minutos, sin salir de casa.
+      </p>
+      <!-- <button class="hero-cta" onclick="document.getElementById('menu').scrollIntoView({behavior:'smooth'})">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <path d="M12 8v4l3 3"/>
+        </svg>
+        Ver menú completo
+      </button> -->
+      <div class="hero-stats">
+        <div>
+          <!-- <div class="stat-val">+30</div>
+          <div class="stat-lbl">Sabores únicos</div> -->
+        </div>
+        <div>
+          <!-- <div class="stat-val">4.9</div>
+          <div class="stat-lbl">Calificación</div> -->
+        </div>
+        <div>
+          <!-- <div class="stat-val">20 min</div>
+          <div class="stat-lbl">Tiempo de entrega</div> -->
+        </div>
+      </div>
+    </div>
+
+    <!-- Imagen hero generada en SVG -->
+    <div class="hero-visual" aria-hidden="true">
+      <img src="images/hero-illustration.svg" alt="Ilustración de helados artesanales" />
+    </div>
+  </section>
+
+  <!-- ==========================================
+       TABS DE CATEGORÍA
+  ========================================== -->
+  <!-- <div class="tabs-wrap" id="menu">
+    <div class="tabs-inner" role="tablist">
+      <button class="tab-btn active" role="tab" onclick="filterTab('todos',this)">Todo el menú</button>
+     <button class="tab-btn" role="tab" onclick="filterTab('helados',this)">Helados</button>
+      <button class="tab-btn" role="tab" onclick="filterTab('bebidas',this)">Bebidas</button>
+      <button class="tab-btn" role="tab" onclick="filterTab('postres',this)">Postres</button>
+    </div>
+  </div> -->
+
+  <!-- ==========================================
+       FEATURED — SCROLL HORIZONTAL
+  ========================================== -->
+  <div class="featured-wrap" id="featured-wrap">
+    <div class="section-header">
+      <!-- <h2 class="section-heading">Más pedidos</h2> -->
+      <!-- <span class="section-sub">Los favoritos de hoy</span> -->
+    </div>
+    <div class="featured-scroll" id="featured-scroll"></div>
+  </div>
+
+  <!-- ==========================================
+       GRID DE PRODUCTOS
+  ========================================== -->
+  <div class="products-wrap">
+    <div class="section-header">
+      <h2 class="section-heading" id="grid-heading">Menú completo</h2>
+    </div>
+    <div class="products-grid" id="products-grid"></div>
+  </div>
+
+  <!-- ==========================================
+       PROPUESTA DE VALOR
+  ========================================== -->
+  <div class="vp-strip" id="nosotros">
+    <div class="vp-inner">
+      <div class="vp-item">
+        <div class="vp-icon">🥛</div>
+        <div>
+          <div class="vp-label">Ingredientes naturales</div>
+          <div class="vp-copy">Sin conservantes, sin colorantes artificiales. Solo lo que la naturaleza ofrece.</div>
+        </div>
+      </div>
+      <div class="vp-item">
+        <div class="vp-icon">🛵</div>
+        <div>
+          <div class="vp-label">Entrega rápida</div>
+          <div class="vp-copy">Domicilio en tu zona. Coordina por WhatsApp y recibe en menos de 20 minutos.</div>
+        </div>
+      </div>
+      <div class="vp-item">
+        <div class="vp-icon">💬</div>
+        <div>
+          <div class="vp-label">Pide sin complicaciones</div>
+          <div class="vp-copy">Sin apps, sin registros. Solo escoge, confirma en WhatsApp y disfruta. 3204033985</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       FOOTER
+  ========================================== -->
+  <footer class="site-footer" id="contacto">
+    <div class="footer-brand">La Neverita</div>
+    <div class="footer-copy">© 2025 · Helados artesanales con amor · Todos los derechos reservados</div>
+  </footer>
+
+  <!-- ==========================================
+       TOAST
+  ========================================== -->
+  <div id="toast" role="status" aria-live="polite"></div>
+
+  <!-- ==========================================
+       CARRITO — SCRIM + DRAWER
+  ========================================== -->
+  <div class="scrim" id="scrim" onclick="closeCart()"></div>
+
+  <aside class="drawer" id="drawer" aria-label="Carrito de compras">
+    <div class="drawer-head">
+      <h2 class="drawer-title">Tu pedido</h2>
+      <button class="drawer-close" onclick="closeCart()" aria-label="Cerrar">✕</button>
+    </div>
+    <div class="drawer-items" id="drawer-items"></div>
+    <div class="drawer-foot" id="drawer-foot">
+      <div class="order-summary" id="order-summary"></div>
+      <button class="btn-clear-all" onclick="clearCart()">Vaciar pedido</button>
+      <button class="btn-wa" onclick="sendWA()">
+        <img src="images/whatsapp.svg" alt="" />
+        Confirmar por WhatsApp
+      </button>
+    </div>
+  </aside>
+
+  <!-- Logo lightbox -->
+  <div id="logo-lightbox" class="lightbox" aria-hidden="true">
+    <div class="lightbox-backdrop"></div>
+    <div class="lightbox-content" role="dialog" aria-label="Logo">
+      <button class="lightbox-close" aria-label="Cerrar">✕</button>
+      <img src="images/logo.png" alt="La Neverita" />
+    </div>
+  </div>
+
+  <!-- Fruit picker modal -->
+  <div id="fruit-modal" class="lightbox" aria-hidden="true">
+    <div class="lightbox-backdrop"></div>
+    <div class="lightbox-content" role="dialog" aria-label="Escoge frutas para la ensalada">
+      <button class="lightbox-close" aria-label="Cerrar">✕</button>
+      <div class="fruit-picker">
+        <h3>Escoge frutas para tu ensalada</h3>
+        <form id="fruit-form">
+          <div class="fruit-list">
+            <!-- checkboxes inserted by JS -->
+          </div>
+        </form>
+        <div class="fruit-actions">
+          <button id="fruit-add-btn" class="btn-add">Agregar al pedido</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product image preview modal -->
+  <div id="product-preview-modal" class="lightbox" aria-hidden="true">
+    <div class="lightbox-backdrop"></div>
+    <div class="lightbox-content preview-modal" role="dialog" aria-label="Vista de imagen">
+      <button class="lightbox-close" aria-label="Cerrar">✕</button>
+      <div class="preview-body">
+        <div class="preview-avatar-wrap">
+          <img src="" alt="" />
+        </div>
+        <div class="preview-label"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================
+       SCRIPT — al final del body
+  ========================================== -->
+  <script src="js/app.js"></script>
+
+</body>
+</html>
