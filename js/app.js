@@ -37,7 +37,7 @@ const catalog = [
 
   { id:5,  name:'Copo de felicidades',      emoji:'🌿', price:11000, cat:'helados', desc:'Fresco, con trozos de chocolate negro.',        featured:false, isNew:true,  img:'images/copo-de-felicidades.png' },
 
-  { id:6,  name:'Fresas con crema',     emoji:'🍧', price:11000,  cat:'helados', desc:'Cítrico y refrescante, cero grasa.',           featured:false, isNew:true,  img:'images/fresas-con-crema.png' },
+  { id:6,  name:'Fresas con crema',     emoji:'🍧', price:11000,  cat:'helados', desc:'Cítrico y refrescante, cero grasa.',           featured:false, isNew:true,  img:'images/Fresas-con-crema.png' },
   // BEBIDAS
   // { id:7,  name:'Malteada de Oreo',     emoji:'🥛', price:14000, cat:'bebidas', desc:'Espesa, fría y con galleta triturada.',        featured:true,  isNew:false },
   { id:8,  name:'Fresas tentacion',   emoji:'🍹', price:11000, cat:'bebidas', desc:'Mix de frutas frescas al momento.',            featured:false, isNew:false, img:'images/fresas-tentación.png'  },
@@ -59,11 +59,9 @@ const catalog = [
 
    { id:17, name:'Mangolada',       emoji:'🍨', price:12000, cat:'postres', desc:'Helado, caramelo casero y maní tostado.',      featured:false, isNew:false, img:'images/mangolada.jpg' },
 
-    { id:17, name:'Mangonada',       emoji:'🍨', price:12000, cat:'postres', desc:'Helado, caramelo casero y maní tostado.',      featured:false, isNew:false, img:'images/mangonada.jpg' }
-    ,
+    { id:17, name:'Mangonada',       emoji:'🍨', price:12000, cat:'postres', desc:'Helado, caramelo casero y maní tostado.',      featured:false, isNew:false, img:'images/mangonada.jpg' },
 
-     { id:17, name:'Ensalada de frutas',       emoji:'🍨', price:12000, cat:'postres', desc:'Helado, caramelo casero y maní tostado.',      featured:false, isNew:false, img:'images/ensaladadefrutas.jpg' }
-    ,
+     { id:17, name:'Ensalada de frutas',       emoji:'🍨', price:12000, cat:'postres', desc:'Helado, caramelo casero y maní tostado.',      featured:false, isNew:false, img:'images/ensaladadefrutas.png' }
 ];
 
 /* ------------------------------------------
